@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: lightblue;
+    align-items: center;
+    text-align: center;
+}
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff;
+    width: 500px;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 75%;
+    height: 10em;
+    padding: 1em 2em;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 400px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Form */
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+}
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
+
+.hoverstuff {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .hoverstuff {
+    display: block;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.important{
+    background: yellow;
+    text-font: white;
+    width: 70%;
+    border: 2px solid;
+    boarder-radius: 7px;
+    padding: 3em;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.nonImportant {
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+}

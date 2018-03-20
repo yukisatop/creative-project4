@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Online Note</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Note:</h1>
+      <p v-show="notes.length === 0">Start taking notes!</p>
+
+      <form v-on:submit.prevent="addnote">
+	<textarea v-focus v-model="text" placeholder="Enter Notes"></textarea>
+	<br>
+	<button type="submit">save</button>
+      </form>
+
+      <div id="blogList">
+	<div v-for="note in notes" v-bind:class="{important:note.important, blogEntry:!note.important}">
+	  <pre>{{ note.text }}</pre>
+	  <br>
+	  <button class="deletebutton" v-on:click="deletenote(note)" class="options">Delete note</button>
+	  <button v-on:click="toggleImportance(note)" class="options">Important</button>
+	</div>
+      </div>
+
+    </div>
+    
+    <div class="footer">
+      My Github: <a href="https://github.com/yukisatop/creative-project4">Yuki Sato's GitHub</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+   </html>
